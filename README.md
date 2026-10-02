@@ -59,7 +59,6 @@ The final AES round does not include MixColumns.
 * **AES-128 Cryptographic Algorithm**
 * **Quartus II**
 * **RTL Simulation**
-* **NIELIT Chip Design**
 
 # AES Encryption Flow
 
