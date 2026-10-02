@@ -9,11 +9,9 @@ module key_expansion(
     output [127:0] round_key7,
     output [127:0] round_key8,
     output [127:0] round_key9,
-    output [127:0] round_key10
-);
+    output [127:0] round_key10);
 
-    
-    // AES S-BOX
+// AES S-BOX
     function [7:0] sbox;
         input [7:0] a;
         begin
@@ -167,18 +165,14 @@ module key_expansion(
         end
     endfunction
 
-
-    // Original key = W0 W1 W2 W3
+// Original key = W0 W1 W2 W3
     
     wire [31:0] w0 = key[127:96];
     wire [31:0] w1 = key[95:64];
     wire [31:0] w2 = key[63:32];
     wire [31:0] w3 = key[31:0];
 
-
-    
-    // Round 1
-
+// Round 1
     wire [31:0] rot_w3;
     wire [31:0] sub_w3;
     wire [31:0] temp1;
@@ -207,11 +201,7 @@ module key_expansion(
 
     assign round_key1 = {w4,w5,w6,w7};
 
-
-    
-    // Round 2
-    
-
+// Round 2
     wire [31:0] temp2;
     wire [31:0] w8, w9, w10, w11;
 
@@ -229,10 +219,7 @@ module key_expansion(
 
     assign round_key2 = {w8,w9,w10,w11};
 
-
-    
-    // Round 3
-   
+// Round 3
     wire [31:0] temp3;
     wire [31:0] w12, w13, w14, w15;
 
@@ -250,10 +237,7 @@ module key_expansion(
 
     assign round_key3 = {w12,w13,w14,w15};
 
-
-    
-    // Round 4
-    
+// Round 4
     wire [31:0] temp4;
     wire [31:0] w16, w17, w18, w19;
 
@@ -271,11 +255,7 @@ module key_expansion(
 
     assign round_key4 = {w16,w17,w18,w19};
 
-
-    
-    // Round 5
-
-
+// Round 5
     wire [31:0] temp5;
     wire [31:0] w20, w21, w22, w23;
 
@@ -293,10 +273,7 @@ module key_expansion(
 
     assign round_key5 = {w20,w21,w22,w23};
 
-
-
-    // Round 6
-    
+// Round 6
     wire [31:0] temp6;
     wire [31:0] w24, w25, w26, w27;
 
@@ -314,10 +291,7 @@ module key_expansion(
 
     assign round_key6 = {w24,w25,w26,w27};
 
-
-    
-    // Round 7
-    
+// Round 7
     wire [31:0] temp7;
     wire [31:0] w28, w29, w30, w31;
 
@@ -335,10 +309,7 @@ module key_expansion(
 
     assign round_key7 = {w28,w29,w30,w31};
 
-
-    
-    // Round 8
-    
+// Round 8
     wire [31:0] temp8;
     wire [31:0] w32, w33, w34, w35;
 
@@ -356,10 +327,7 @@ module key_expansion(
 
     assign round_key8 = {w32,w33,w34,w35};
 
-
-    
-    // Round 9
-    
+// Round 9
     wire [31:0] temp9;
     wire [31:0] w36, w37, w38, w39;
 
@@ -377,11 +345,7 @@ module key_expansion(
 
     assign round_key9 = {w36,w37,w38,w39};
 
-
-    
-    // Round 10
-    
-
+// Round 10
     wire [31:0] temp10;
     wire [31:0] w40, w41, w42, w43;
 
