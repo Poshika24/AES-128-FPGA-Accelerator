@@ -89,7 +89,7 @@ The final AES round does not include MixColumns.
 
 # Verification
 
-The AES-128 RTL design is verified through simulation using known AES test vectors.
+The AES-128 RTL design is being verified through simulation using known AES test vectors.
 
 Verification focuses on:
 
@@ -102,5 +102,4 @@ Verification focuses on:
 
 **Current Status:** RTL design and simulation-based verification in progress.
 
-The current project does not include physical FPGA-kit implementation. Future work may include synthesis analysis and hardware implementation if required.
-
+The current project focuses on RTL design and simulation-based verification. Synthesis analysis may be performed as part of further evaluation.
