@@ -1,15 +1,15 @@
 module key_expansion(
     input  [127:0] key,
-    output [127:0] round_key1,
-    output [127:0] round_key2,
-    output [127:0] round_key3,
-    output [127:0] round_key4,
-    output [127:0] round_key5,
-    output [127:0] round_key6,
-    output [127:0] round_key7,
-    output [127:0] round_key8,
-    output [127:0] round_key9,
-    output [127:0] round_key10);
+    output [127:0] round1_key,
+    output [127:0] round2_key,
+    output [127:0] round3_key,
+    output [127:0] round4_key,
+    output [127:0] round5_key,
+    output [127:0] round6_key,
+    output [127:0] round7_key,
+    output [127:0] round8_key,
+    output [127:0] round9_key,
+    output [127:0] round10_key);
 
 // AES S-BOX
     function [7:0] sbox;
