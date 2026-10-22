@@ -199,7 +199,7 @@ module key_expansion(
     assign w6 = w2 ^ w5;
     assign w7 = w3 ^ w6;
 
-    assign round_key1 = {w4,w5,w6,w7};
+    assign round1_key = {w4,w5,w6,w7};
 
 // Round 2
     wire [31:0] temp2;
@@ -217,7 +217,7 @@ module key_expansion(
     assign w10 = w6 ^ w9;
     assign w11 = w7 ^ w10;
 
-    assign round_key2 = {w8,w9,w10,w11};
+    assign round2_key = {w8,w9,w10,w11};
 
 // Round 3
     wire [31:0] temp3;
@@ -235,7 +235,7 @@ module key_expansion(
     assign w14 = w10 ^ w13;
     assign w15 = w11 ^ w14;
 
-    assign round_key3 = {w12,w13,w14,w15};
+    assign round3_key = {w12,w13,w14,w15};
 
 // Round 4
     wire [31:0] temp4;
@@ -253,7 +253,7 @@ module key_expansion(
     assign w18 = w14 ^ w17;
     assign w19 = w15 ^ w18;
 
-    assign round_key4 = {w16,w17,w18,w19};
+    assign round4_key = {w16,w17,w18,w19};
 
 // Round 5
     wire [31:0] temp5;
@@ -271,7 +271,7 @@ module key_expansion(
     assign w22 = w18 ^ w21;
     assign w23 = w19 ^ w22;
 
-    assign round_key5 = {w20,w21,w22,w23};
+    assign round5_key = {w20,w21,w22,w23};
 
 // Round 6
     wire [31:0] temp6;
@@ -289,7 +289,7 @@ module key_expansion(
     assign w26 = w22 ^ w25;
     assign w27 = w23 ^ w26;
 
-    assign round_key6 = {w24,w25,w26,w27};
+    assign round6_key = {w24,w25,w26,w27};
 
 // Round 7
     wire [31:0] temp7;
@@ -307,7 +307,7 @@ module key_expansion(
     assign w30 = w26 ^ w29;
     assign w31 = w27 ^ w30;
 
-    assign round_key7 = {w28,w29,w30,w31};
+    assign round7_key = {w28,w29,w30,w31};
 
 // Round 8
     wire [31:0] temp8;
@@ -325,7 +325,7 @@ module key_expansion(
     assign w34 = w30 ^ w33;
     assign w35 = w31 ^ w34;
 
-    assign round_key8 = {w32,w33,w34,w35};
+    assign round8_key = {w32,w33,w34,w35};
 
 // Round 9
     wire [31:0] temp9;
@@ -343,7 +343,7 @@ module key_expansion(
     assign w38 = w34 ^ w37;
     assign w39 = w35 ^ w38;
 
-    assign round_key9 = {w36,w37,w38,w39};
+    assign round9_key = {w36,w37,w38,w39};
 
 // Round 10
     wire [31:0] temp10;
@@ -361,6 +361,6 @@ module key_expansion(
     assign w42 = w38 ^ w41;
     assign w43 = w39 ^ w42;
 
-    assign round_key10 = {w40,w41,w42,w43};
+    assign round10_key = {w40,w41,w42,w43};
 
 endmodule
